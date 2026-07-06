@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Form Elements</title>
+    </head>
+    <body>
+        <h1>Form Elements</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+            <br><br>
+
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars">
+                <option value="BMW">BMW</option>
+                <option value="Bugatti">Bugatti</option>
+                <option value="ferrari">ferrari</option>
+                <option value="Maclaren">Maclaren</option>
+            </select>
+
+            <br><br>
+
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars" size="4" multiple>
+                <option value="BMW">BMW</option>
+                <option value="Bugatti">Bugatti</option>
+                <option value="ferrari">ferrari</option>
+                <option value="Maclaren">Maclaren</option>
+            </select>
+
+            <br><br>
+
+            <textarea name="message" rows="10" cols="30">
+               anybody who wants to play inthe garden, can play.
+            </textarea>
+
+            <br><br>
+
+            <input list="Mobiles">
+            <datalist id="Mobiles">
+                <option value="iPhone">
+                <option value="Samsung">
+                <option value="Google (Pixel)">
+                <option value="Vivo">
+                <option value="OnePLUS">
+            </datalist>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html> 
