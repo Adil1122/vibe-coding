@@ -1,0 +1,5 @@
+1. Using if / else condition, check a number is positive or negative
+2. Declare 3 numbers and check by if / else condition which number is largest
+3. print numbers from 1 to 100 which are divisible by 3
+4. print all even and odd numbers from 20 to 80
+5. print even numbers from 100 to 1 in reverse order
