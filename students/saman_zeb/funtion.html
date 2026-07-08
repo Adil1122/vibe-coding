@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Functions</title>
+        <script>
+            function substractnumbers(num1, num2) {
+                return num1 - num2;
+            }
+            function multiplynumbers(num1, num2) {
+                return num1 * num2;
+            }
+            function dividenumbers(num1, num2) {
+                return num1 / num2;
+            }
+            function substraction () {
+                let num1 = parseFloat(document.getElementById("num1").value);
+                let num2 = parseFloat(document.getElementById("num2").value);
+                let result = substractnumbers(num1, num2);
+                document.getElementById("result").innerHTML = "The substraction is: " + result;
+            }
+              function multiplication () {
+                let num1 = parseFloat(document.getElementById("num1").value);
+                let num2 = parseFloat(document.getElementById("num2").value);
+                let result = multiplynumbers(num1, num2);
+                document.getElementById("result").innerHTML = "The multiplication is: " + result;
+            }
+         
+            function division () {
+                let num1 = parseFloat(document.getElementById("num1").value);
+                let num2 = parseFloat(document.getElementById("num2").value);
+                let result = dividenumbers(num1, num2);
+                document.getElementById("result").innerHTML = "The division is: " + result;
+            }
+
+         </script>
+    </head>
+    
+    <body>
+        <br><br>
+        <h1 style="text-align: center; font-style:Time New Roman">Calculate Numbers</h1>
+        <form>
+            <label style=" margin: 80px;" for="num1">Number 1:</label>
+            <input type="number" id="num1" name="num1"><br><br>
+
+            <label style=" margin: 80px;" for="num2">Number 2:</label>
+            <input type="number" id="num2" name="num2"><br><br>
+            <input style="margin: 30px;" type="button" value="Substract Numbers" onclick="substraction()">
+            <input style="margin: 30px;" type="button" value="Multiply Numbers" onclick="multiplication()">
+            <input style="margin: 30px;" type="button" value="Divide Numbers" onclick="division()">
+        </form>
+    <p id="result"></p>
+    </body>
+</html>
