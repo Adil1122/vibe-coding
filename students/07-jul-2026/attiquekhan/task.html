@@ -1,0 +1,31 @@
+html>
+    <head>
+        <title>intro class</title>
+ <script>
+            function subtractnumbers(num1,num2) {
+                return num1 - num2;
+            } 
+            function subtraction() {
+                 let num1 = parseFloat(document.getElementByid("num1").value);
+                let num2 = parseFloat(document.getElementByid("num2").value);
+                let result = subtractNumbers(num1, num2);
+                document.getElementByid("result").innerHTML = "The result is: " + result;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h1> this is the intro class</h1>
+
+        <form>
+            <label for="num1">number 1:</label>
+            <input type="number" id="num1 "name="num1"> <br></br>
+            <label for="num2">number 2:</label>
+            <input type="number" id="num2" name="num2"><br><br>
+            <input type="button" value="subtract numbers" onclick="subtraction()">
+            
+        </form>
+        
+            <p id="result"></p>
+    </body>
+</html>
