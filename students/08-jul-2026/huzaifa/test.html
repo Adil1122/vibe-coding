@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <tittle>Basic missile system</tittle>
+
+        <script>
+            function sumNumbers(num1,num2){
+                return num1 + num2;
+            }
+            function calculatesum(){
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let result= sumNumbers(num1,num2)
+            document.getElementById("result").innerHTML ="The sum:"+ result;
+            }
+
+            function subNumbers(num1,num2){
+                return num1 - num2;
+            }
+
+            function calculatesub(){
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let result= subNumbers(num1,num2)
+            document.getElementById("result").innerHTML ="The sub:"+ result;
+            }
+        </script>
+        <head>
+            <body>
+                <h1> basic missile system</h1>
+                <form>
+                    <label for="num1">Number 1:</label>
+                    <input type ="number" id ="num1" name ="num1"><br><br>
+
+                    <label> for="num2>Number 2:</label>
+                    <input type ="number"id="num2" name ="num2"><br><br>
+                    <input type="button" value= "add number" onclick="calculatesum()">
+                    <input type="button" value= "sub number" onclick="calculatesub()">
+                </form>
+                
+                <p id ="result"></p>
+            </body>
+        </head>
+    <html>

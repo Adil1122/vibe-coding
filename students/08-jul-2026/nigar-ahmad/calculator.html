@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>intro class</title>
+     <script>
+        function subtractNumbers (num1, num2) {
+           return num1 - num2;
+        }
+              function calculateDifference() {
+                let num1 = parseFloat(document.getElementById("num1").value);
+                let num2 = parseFloat(document.getElementById("num2").value);
+                let result = subtractNumbers(num1, num2);
+                document.getElementById("result").innerHTML = "The difference is: " + result;
+            }
+     </script>
+     </html>
+      <body>
+        <h1>intro class</h1>
+        <label for="num1">Number 1:</label>
+            <input type="number" id="num1" name="num1"><br><br>
+
+        <label for="num2">Number 2:</label>
+            <input type="number" id="num2" name="num2"><br><br>
+            <input type="button" value="substractnumber" onclick="calculateDifference()">
+
+            <p id="result"></p>
+        </form>
+      </body>
+      </html>
