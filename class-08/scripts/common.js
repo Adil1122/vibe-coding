@@ -1,0 +1,28 @@
+let employees = [];
+
+function addEmployee() {
+    let id = document.getElementById("id").value;
+    if(alreadyExists(id)) {
+        alert("Employee with ID " + id + " already exists.");
+        return;
+    }
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+
+    let employee = {
+        id: id,
+        name: name,
+        age: age
+    };
+    employees.push(employee);
+    console.log(employees);
+}
+
+function alreadyExists(id) {
+    for (let i = 0; i < employees.length; i++) {
+        if (employees[i].id == id) {
+            return true;
+        }
+    }
+    return false;
+}
