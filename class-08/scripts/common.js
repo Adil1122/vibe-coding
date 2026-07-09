@@ -16,6 +16,7 @@ function addEmployee() {
     };
     employees.push(employee);
     console.log(employees);
+    displayEmployees();
 }
 
 function alreadyExists(id) {
@@ -25,4 +26,40 @@ function alreadyExists(id) {
         }
     }
     return false;
+}
+
+function displayEmployees() {
+    let tableBody = document.getElementById("employeeTableBody");
+    tableBody.innerHTML = "";
+
+    for (let i = 0; i < employees.length; i++) {
+        let employee = employees[i];
+        let row = tableBody.insertRow();
+        let idCell = row.insertCell(0);
+        let nameCell = row.insertCell(1);
+        let ageCell = row.insertCell(2);
+        let deleteCell = row.insertCell(3);
+        let deleteButton = document.createElement("button");
+        deleteButton.innerHTML = "Delete";
+        
+        deleteButton.onclick = function() {
+            deleteEmployee(employee.id);
+        };
+        deleteCell.appendChild(deleteButton);
+        idCell.innerHTML = employee.id;
+        nameCell.innerHTML = employee.name;
+        ageCell.innerHTML = employee.age;
+    }
+}
+
+function deleteEmployee(id) {
+    if(confirm("Are you sure you want to delete employee with ID " + id + "?")) {
+        for (let i = 0; i < employees.length; i++) {
+            if (employees[i].id == id) {
+                employees.splice(i, 1);
+                break;
+            }
+        }
+    }
+    displayEmployees();
 }
