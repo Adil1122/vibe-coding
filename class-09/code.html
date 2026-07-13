@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Class</title>
+</head>
+<body>
+
+<h2>Student Class Example</h2>
+<p id="output"></p>
+
+<script>
+    // Student class
+    class Student {
+        constructor() {
+            this.name = "";
+            this.age = 0;
+        }
+
+        // Setter for name
+        setName(name) {
+            this.name = name;
+        }
+
+        // Getter for name
+        getName() {
+            return this.name;
+        }
+
+        // Setter for age
+        setAge(age) {
+            this.age = age;
+        }
+
+        // Getter for age
+        getAge() {
+            return this.age;
+        }
+    }
+
+    // Create object
+    let student = new Student();
+
+    // Set values
+    student.setName("qasim");
+    student.setAge(20);
+
+    // Display values
+    document.getElementById("output").innerHTML =
+        "Name: " + student.getName() + "<br>" +
+        "Age: " + student.getAge();
+</script>
+
+</body>
+</html>
