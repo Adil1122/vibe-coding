@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Employee Management System</title>
+        <script src="Scripts/common.js"></script>
+    </head>
+
+    <body>
+        <h1>Employee Management System</h1>
+
+        <form>
+
+            <label for="id">ID: </label>
+            <Input type ="number" id="id" name="id"> <br></br>
+
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name"><br></br>
+
+            <label for="age">Age: </label>
+            <input type="number" id="age" name="age"><br></br>
+
+            <input type="button" value=" Add Employee" onclick="addEmployee()">
+        </form>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody id="EmployeeTableBody">
+            </tbody>
+        </table>
+    </body>
+</html>
