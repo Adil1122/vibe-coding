@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>OOP Concepts</title>
+        <script>
+            class Student {
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+
+                getName() {
+                    return this.name;
+            
+                }
+
+                getAge() {
+                    return this.age;
+                }
+
+                setName(name) {
+                    this.name = name;
+                }
+
+                setage(age) {
+                    this.age = age;
+                }
+            }
+
+            const student = new Student("Hassan" , 18);
+
+            console.log(student.getName());
+            console.log(student.getAge());
+
+            student.setName("Hassan");
+            student.setAge(18);
+
+            console.log(student.getName());
+            console.log(student.getAge());
+            
+            </script>
+    </head>
+    <body>
+        <h1>OOP Concepts task Perform by Mustafa Hassan</h1>
+    </body>
+</html>
