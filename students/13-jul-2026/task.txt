@@ -1,0 +1,3 @@
+Create a class name Student
+Student has 2 attributes name and age
+Make its getter and setter functions ie getName, getAge, setName, setAge
