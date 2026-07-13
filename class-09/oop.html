@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>OOP Concepts</title>
+        <script>
+            class BankAccount {
+                constructor(balance) {
+                    this.balance = balance;
+                }
+
+                deposit(amount) {
+                    this.balance += amount;
+                }
+
+                getBalance() {
+                    return this.balance;
+                }
+            }
+
+            const account = new BankAccount(1000);
+            account.deposit(500);
+
+            console.log(account.getBalance()); // 1500
+        </script>
+    </head>
+    <body>
+        <h1>OOP Concepts</h1>
+    </body>
+</html>
