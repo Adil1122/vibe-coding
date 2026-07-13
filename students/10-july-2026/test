@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title> oop concepts</title>
+        <script>
+            class Bankaccount {
+                constructor(balance){
+                    this.balance=balance;
+                }
+                deposit(amount) {
+                    this. balance += amount;
+
+                }
+                getBalance(){
+                    return this.balance;
+                }
+
+                }
+                const Account =new Bankaccount(500000);
+                Account.deposit(40000);
+
+                console.log (Account.getBalance());
+        </script>
+    </head>
+    <body><h1> oop concept</h1></body>
+    <html>
