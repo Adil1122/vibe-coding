@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>OOP concepts </title>
+        <script>
+            class student{
+                constructor(name,age){
+                    this.name=name;
+                    this.age=age;
+
+                }
+                getname(){
+                    return this.name;
+                }
+                getage(){
+                    return this.age;
+                }
+                set(name,age){
+                    this.name=name;
+                    this.age=age;
+                }
+            }
+
+            const stu = new student('amna',20);
+             console.log('student 01');
+             console.log(stu.getname());
+             console.log(stu.getage());    
+
+             stu.set('fatima',19);
+            console.log('student 02');
+            console.log(stu.getname());
+             console.log(stu.getage());     
+
+             
+             stu.set('umer',19);
+             console.log('student 03');
+             console.log(stu.getname());
+             console.log(stu.getage());      
+           
+             
+             stu.set('zainab',19);
+            console.log('Student 04');
+             console.log(stu.getname());
+             console.log(stu.getage());   
+               
+           
+       
+ </script>
+        </head>
+
+        <body>
+            <h1>oop conceps</h1>
+        </body>
+</html>            
