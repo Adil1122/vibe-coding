@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>OOP Concepts</title>
+
+        <script>
+            class Student {
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+
+                getName() {
+                    return this.name;
+                }
+
+                getAge() {
+                    return this.age;
+                }
+
+                setName(name) {
+                    this.name = name;
+                }
+
+                setAge(age) {
+                    this.age = age;
+                }
+            }
+
+            const student1 = new Student("Hammad;", 22);
+
+            student1.setName("Hamad");
+            student1.setAge(22);
+
+            console.log(" Name:", student1.getName());
+            console.log(" Age:", student1.getAge());
+        </script>
+    </head>
+
+    <body>
+        <h1>OOP Concepts - Student Class</h1>
+    </body>
+</html>
+
+
+     
