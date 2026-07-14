@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Class</title>
+</head>
+<body>
+
+<script>
+    class Student {
+        constructor() {
+            this.name = "";
+            this.age = 0;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setAge(age) {
+            this.age = age;
+        }
+
+        getAge() {
+            return this.age;
+        }
+    }
+    const student = new Student();
+    student.setName("DILZAK");
+    student.setAge(20);
+
+    document.write("Name: " + student.getName() + "<br>");
+    document.write("Age: " + student.getAge());
+</script>
+
+</body>
+</html>
