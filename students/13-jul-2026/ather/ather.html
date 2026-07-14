@@ -1,0 +1,47 @@
+@ -0,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Class</title>
+</head>
+<body>
+
+<script>
+    class Student {
+        constructor() {
+            this.name = "";
+            this.age = 0;
+        }
+
+        // Setter for name
+        setName(name) {
+            this.name = name;
+        }
+
+        // Getter for name
+        getName() {
+            return this.name;
+        }
+
+        // Setter for age
+        setAge(age) {
+            this.age = age;
+        }
+
+        // Getter for age
+        getAge() {
+            return this.age;
+        }
+    }
+
+    // Example
+    const student = new Student();
+    student.setName("ather nazeef");
+    student.setAge(16);
+
+    document.write("Name: " + student.getName() + "<br>");
+    document.write("Age: " + student.getAge());
+</script>
+
+</body>
+</html>
