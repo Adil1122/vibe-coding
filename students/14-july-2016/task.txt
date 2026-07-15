@@ -1,0 +1,1 @@
+Create student_2, student_3 and student_4 objects and call their setters and getters
