@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>OOP Concepts</title>
+        <script>
+            class Animal {
+                speak() {
+                    console.log("Animal makes a sound");
+                }
+            }
+
+            class Dog extends Animal {
+                bark() {
+                    console.log("Dog barks");
+                }
+            }
+
+            const dog = new Dog();
+
+            dog.speak(); // Inherited
+            dog.bark();  // Own method
+        </script>
+    </head>            
+    <body>
+        <h1>OOP Concepts</h1>
+    </body>
+</html>
