@@ -1,0 +1,42 @@
+<html> 
+    <head> 
+        <title>
+            Inherited class
+    </title>
+    <script>
+        class animal{
+            sound(){
+                console.log("animals make sound");
+
+            }
+        }
+        class duck extends animal{
+            quack(){
+                console.log("A duck quacks");
+            }
+            
+        }
+
+        class horse extends animal{
+            neigh(){
+                console.log("A horse neighs")
+            }
+        }
+
+        const Duck= new duck();
+
+        Duck.sound();
+        Duck.quack();
+       
+
+
+
+        const Horse= new horse();
+        Horse.sound();
+        Horse.neigh();
+        
+    </script>
+    </head>
+    <body>
+        OOP INHERITENCE </body>
+</html>
