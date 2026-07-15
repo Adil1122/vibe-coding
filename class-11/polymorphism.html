@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>OOP Concepts</title>
+        <script>
+            class Animal {
+                speak() {
+                    console.log("Animal speaks");
+                }
+            }
+
+            class Dog extends Animal {
+                speak() {
+                    console.log("Dog barks");
+                }
+            }
+
+            class Cat extends Animal {
+                speak() {
+                    console.log("Cat meows");
+                }
+            }
+
+            const dog = new Dog();
+            const cat = new Cat();
+
+            dog.speak(); // Dog barks
+            cat.speak(); // Cat meows
+
+        </script>
+    </head>            
+    <body>
+        <h1>OOP Concepts</h1>
+    </body>
+</html>
