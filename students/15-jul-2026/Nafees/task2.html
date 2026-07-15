@@ -1,0 +1,27 @@
+html>
+    <head>
+        <title>OOP Concepts</title>
+        <script>
+            class Person {
+                introduction() {
+                    console.log("I am a Person");
+                }
+            }
+
+            class Student extends Person {
+                introduction() {
+                    console.log("I am Student");
+                }
+            }
+
+            const person = new Person();
+            const student = new Student();
+
+            person.introduction(); 
+            student.introduction(); 
+        </script>
+    </head>            
+    <body>
+        <h1>OOP Concepts</h1>
+    </body>
+</html>
