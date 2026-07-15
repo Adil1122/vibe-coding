@@ -1,0 +1,5 @@
+Create a class Person as a parent class
+this class has a function introduction. It console logs the name of Person
+Create a class Student that extends Person class
+Student class has a function study. This function console logs "I am studying"
+Create object of student and call both inherited and own function 
