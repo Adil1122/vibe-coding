@@ -3,3 +3,9 @@ this class has a function introduction. It console logs the name of Person
 Create a class Student that extends Person class
 Student class has a function study. This function console logs "I am studying"
 Create object of student and call both inherited and own function 
+
+task # 2
+Use same classes
+make a function introduction in both Person and Student classes
+in parent class it console logs "I am a person"
+In child class it console logs "I am a student"
