@@ -1,0 +1,26 @@
+
+<html>
+<head>
+    <title>oop concept</title>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+
+            introduction() {
+                console.log("My name is " + this.name);
+            }
+        }
+        class Student extends Person {
+            study() {
+                console.log("I am studying");
+            }
+        }
+
+        const student1 = new Student("ather");
+        student1.introduction();
+        student1.study();
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+<html>
+  <head>
+     <title>OOP Consepts</title>
+    <script>
+    class Person {
+    
+      introduction() {
+        console.log("My name is " + this.name);
+      }
+    }
+    class Student extends Person {
+      study() {
+        console.log("I am studying");
+      }
+    }
+    const student = new Student("Nafees khan");
+    student.introduction();
+    student.study();
+  </script>
+
+</body>
+</html>
