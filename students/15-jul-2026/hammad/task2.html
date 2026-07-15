@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>polymorphism</title>
+        <script>
+        class Person {
+    introduction() {
+        console.log("I am a person");
+    }
+}
+
+class Student extends Person {
+    introduction() {
+        super.introduction(); 
+        console.log("I am a student");
+    }
+}
+
+const std = new Student();
+std.introduction();    
+        </script>
+    </head>
+    <body>
+        <h1>polymorphism example</h1>
+    </body>
+</html>

@@ -1,23 +1,24 @@
-<html>
+html>
     <head>
         <title>OOP Concepts</title>
         <script>
             class Person {
                 introduction() {
-                    console.log("My name is Mustafa Hassan");
+                    console.log("I am a Person");
                 }
             }
 
-            class Student extends Person   {
-                study() {
-                    console.log("I am Studying");
+            class Student extends Person {
+                introduction() {
+                    console.log("I am Student");
                 }
             }
 
+            const person = new Person();
             const student = new Student();
 
-            student.introduction(); // Inherited
-            student.study();  // Own method
+            person.introduction(); 
+            student.introduction(); 
         </script>
     </head>            
     <body>
