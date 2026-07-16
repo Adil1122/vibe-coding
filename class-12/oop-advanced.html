@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>OOP Concepts</title>
+        <script>
+
+            // Absrtaction: Hiding the implementation details and showing only the functionality to the user.
+            class Car {
+                start() {
+                    this.#engineStart();
+                    console.log("Car started");
+                }
+
+                #engineStart() {
+                    console.log("Engine started");
+                }
+            }
+
+            const car = new Car();
+            car.start();
+            // car.#engineStart(); // Error (private method)
+
+            // Object Litetal
+            const person = {
+                name: "John",
+                age: 25,
+
+                greet() {
+                    console.log(`Hello, I'm ${this.name}`);
+                }
+            };
+
+            person.greet();
+
+            // Constructor Function
+
+            function Person2(name, age) {
+                this.name = name;
+                this.age = age;
+
+                this.greet2 = function () {
+                    console.log(`Hello ${this.name}`);
+                };
+            }
+
+            const p1 = new Person2("Alice", 22);
+            p1.greet2();
+
+            // Static method
+
+            class MathUtils {
+                static add(a, b) {
+                    return a + b;
+                }
+            }
+
+            console.log(MathUtils.add(10, 20));
+
+            // Prototype method
+
+            function Person(name) {
+                this.name = name;
+            }
+
+            Person.prototype.greet = function () {
+                console.log(`Hello ${this.name}`);
+            };
+
+            const p = new Person("John");
+
+            p.greet();
+
+
+        </script>
+    </head>            
+    <body>
+        <h1>OOP Concepts</h1>
+    </body>
+</html>
