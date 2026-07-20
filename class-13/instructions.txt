@@ -1,0 +1,8 @@
+1. Install Xampp on your computers
+2. Start Apache Server
+3. Start MySql Server
+4. Go to http://localhost/phpmyadmin
+5. Create a database named emp-management
+6. Create table employees with columns (id, name, age, dob, created_at, updated_at)
+7. Insert records in employees table
+8. Select all records from employees table

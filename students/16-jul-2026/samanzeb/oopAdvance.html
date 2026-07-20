@@ -1,0 +1,55 @@
+<html>
+    <head> <title>OOP Advance Concepts </title>
+    <script>
+
+    //Abstraction Concept
+    class AtmMachine{
+        WithDraw(){
+            this.#checkbalance();
+            console.log("This amount can be  withdarw");
+          }
+         #checkbalance(){
+         console.log("Amount is valid")
+    }
+    }
+
+    const atm = new AtmMachine();
+    atm.WithDraw();
+
+    // object literals 
+    const emp = {
+        id:176,
+        dept:'software engineer',
+
+        intro(){
+            console.log(`I'm employee with id ${this.id} in th edepartment of ${this.dept}`);
+        }
+    }
+    emp.intro();
+
+    //constructor function
+    function student(id,name){
+        this.id=id;
+        this.name=name;
+
+        this.data= function(){
+            console.log(`hello i'm student with id ${this.id} and name ${this.name}`);
+        }
+
+    }
+    const stu = new student(2,'amna');
+    stu.data();
+
+    //static function
+
+    class library{
+        static add (a,b){
+            return a+b;
+        }
+    
+    }
+    console.log(library.add(23,34));
+
+    </script>
+    </head>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Calculator</title>
+     <script>
+        class Calculator {
+            add() {
+                let a = parseFloat(document.getElementById('num1').value);
+                let b = parseFloat(document.getElementById('num2').value);
+                document.getElementById('result').innerHTML = "The sum is: "+(a + b);
+            }
+
+            subtract() {
+                let a = parseFloat(document.getElementById('num1').value);
+                let b = parseFloat(document.getElementById('num2').value);
+               document.getElementById('result').innerHTML = "The result is: "+(a - b);
+            }
+
+            multiply() {
+                let a = parseFloat(document.getElementById('num1').value);
+                let b = parseFloat(document.getElementById('num2').value);
+                document.getElementById('result').innerHTML = "The result is: "+(a * b);
+            }
+
+            divide() {
+                let a = parseFloat(document.getElementById('num1').value);
+                let b = parseFloat(document.getElementById('num2').value);
+                document.getElementById('result').innerHTML = "The result is: "+(a / b);
+                
+            }
+        }
+
+        const cal = new Calculator();
+    </script>
+</head>
+<body>
+    <br>
+    <h1 style="background-color: rgba(210, 213, 195, 0.895); text-align: center;">Calculator</h1>
+    <div style="background-color: rgb(219, 224, 224);text-align: center;">
+
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1"><br><br>
+    <br>
+
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2"><br><br>
+    
+    <br>
+    <button onclick="cal.add()" style="padding: 5px 10px; font-size: 14px;"> + </button>
+    <button onclick="cal.subtract()"style="padding: 5px 10px; font-size: 14px;"> - </button>
+    <button onclick="cal.multiply()"style="padding: 5px 10px; font-size: 14px;">  x  </button>
+    <button onclick="cal.divide()"style="padding: 5px 10px; font-size: 14px;">  / </button>
+
+    <h3 id="result">Result:</h3>
+    </div>
+</body>
+</html>

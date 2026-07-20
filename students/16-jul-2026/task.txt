@@ -1,0 +1,4 @@
+1. Create a class Calculator with 4 methods add, subtract, multiply and divide 
+2. Take input from user for number 1 and number 2
+3. Create 4 buttons Add Numbers, Subtract Numbers, Multiply Numbers and Divide Numbers and 
+upon clicking them, class relevant functions should be called
