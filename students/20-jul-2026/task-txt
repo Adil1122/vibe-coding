@@ -1,0 +1,8 @@
+1. Create a table messages with columns:
+id (int AI), 
+from_user_id (int), 
+to_user_id (int), 
+message (text), 
+is_seen (boolean)
+created_at (timestamp),
+updated_at (timestamp)

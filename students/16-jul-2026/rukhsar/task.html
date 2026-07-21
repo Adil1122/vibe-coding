@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Calculator using OOP</title>    
+    </head>
+    
+        <script>
+            class Calculator {
+                add() {
+                    let a ; parseFloat( document.getElementById("num1").value);
+                    let b ; parseFloat(document.getElementById("num2").value);
+                    document.getElementById("result").innerHTML="Result:"+(a+b);
+                }
+
+                subtract() {
+                   let a ; parseFloat( document.getElementById("num1").value);
+                    let b ; parseFloat(document.getElementById("num2").value);
+                    document.getElementById("result").innerHTML="Result:"+(a-b);
+                }
+                multiply() {
+                    let a ; parseFloat( document.getElementById("num1").value);
+                    let b ; parseFloat(document.getElementById("num2").value);
+                    document.getElementById("result").innerHTML="Result:"+(a*b);
+                }
+
+                divide() {
+                    let a ; parseFloat( document.getElementById("num1").value);
+                    let b ;parseFloat(document.getElementById("num2").value);
+                    document.getElementById("result").innerHTML="Result:"+(a/b);
+                }
+                
+            }
+            const cal = new Calculator();
+            
+
+        </script>
+        </head>
+        <body>
+        <h2>Calculator using OOP</h2>
+            
+        <label>First number:</label><br>
+        <input type="number"id="num1"> <br></br>
+
+         <label>Second number:</label><br>
+        <input type="number"id="num2"> <br></br>
+
+        <button onclick="cal.add()">Add Numbers</button>
+        <button onclick="cal.subtract()">Subtract Numbers</button>
+         <button onclick="cal.multiply()">Multiply Numbers</button>
+         <button onclick="cal.divide()">Divide Numbers</button>
+
+            <h3 id="result">Result:</h3>
+    </body>
+</html>

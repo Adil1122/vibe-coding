@@ -1,0 +1,17 @@
+1. Create a table customers with:
+id (int AI)
+name (varchar 100)
+city (varchar 100)
+country (varchar 100)
+age (int)
+created_at (timestamp)
+updated_at (timestamp)
+
+then insert 5 random records in this table
+
+2. select all records from customers
+
+3. select name and city of customers whose age is greater than 18 years
+
+4. select all records from table order by age descending (ie order by age desc)
+
