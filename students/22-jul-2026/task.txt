@@ -13,4 +13,11 @@ marks (int - value from 1 to 100)
 created_at (timestamp)
 updated_at (timestamp)
 
-apply inner join query and select student name, course name and marks from both tables 
+apply inner join query and select student name, course name
+ and marks from both tables 
+
+ Helping Query:
+
+ SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
