@@ -1,0 +1,16 @@
+1. Create a table students with:
+id (int AI)
+name (varchar 100)
+age (int)
+created_at (timestamp)
+updated_at (timestamp)
+
+2. Create a table student_courses with:
+id (int AI)
+name (varchar 100)
+student_id (int - foreign key from students)
+marks (int - value from 1 to 100)
+created_at (timestamp)
+updated_at (timestamp)
+
+apply inner join query and select student name, course name and marks from both tables 
