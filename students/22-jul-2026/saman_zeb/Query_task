@@ -1,0 +1,17 @@
+--Queries
+
+SELECT student.name AS student_name, student_course.name AS course_name, student_course.marks
+FROM student_course
+INNER JOIN student ON student_course.student_id = student.id;
+
+--result
+
+student_name 	course_name 	marks 	
+fatima          calculas         83
+	
+amina            PF              81                   
+	
+azka             OOP             92
+	         
+	
+	
