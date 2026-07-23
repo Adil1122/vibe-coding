@@ -1,0 +1,26 @@
+1. Create a table named customers with:
+id (int AI)
+name (varchar 100)
+age (int)
+created_at (timestamp)
+updated_at (timestamp)
+
+2. Create a table named bookings with:
+id (int AI)
+title (varchar 100)
+seat_number (varchar 100)
+date_time (timestamp)
+customer_id (int - foreign key from customers table)
+created_at (timestamp)
+updated_at (timestamp)
+
+insert 5 records in each table.
+
+use inner join query and select customer name, age, 
+booking title, seat_number and date time from both tables.
+
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+
