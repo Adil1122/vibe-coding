@@ -9,3 +9,5 @@ updated_at (timestamp)
 2. Insert 5 records by insert query
 3. Update name, color, model where id = 1
 4. Delete record whose model is 2010 and color is black
+
+https://www.w3schools.com/mySQL/mysql_insert.asp
