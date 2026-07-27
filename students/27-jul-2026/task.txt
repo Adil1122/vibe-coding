@@ -1,0 +1,11 @@
+1. Create a table car with
+id (int AI)
+name (varchar 100)
+color (carchar 10)
+model (varchar 5 - Year value like 2005)
+created_at (timestamp)
+updated_at (timestamp)
+
+2. Insert 5 records by insert query
+3. Update name, color, model where id = 1
+4. Delete record whose model is 2010 and color is black
