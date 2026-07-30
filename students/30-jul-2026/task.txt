@@ -1,0 +1,10 @@
+Write a query to find the total number of customers in the customers table.
+Write a query to find the average age of all customers.
+Write a query to find the highest and lowest order amount (total_price) from the orders table.
+Write a query to display the total number of customers in each country using the GROUP BY clause.
+Write a query to display the average age of customers in each city.
+Write a query to display the total quantity of products ordered by each customer. Show the customer_id and total quantity.
+Write a query to display the total sales (SUM(total_price)) made by each customer.
+Write a query to display the countries having more than 2 customers using the HAVING clause.
+Write a query to display the customers whose total order amount is greater than 100000. Show the customer name and total order amount using an INNER JOIN, GROUP BY, and HAVING.
+Write a query to display the products that have been ordered more than 5 times in total. Show the product name and total quantity ordered using GROUP BY and HAVING.
