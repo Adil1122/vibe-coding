@@ -1,0 +1,36 @@
+SELECT COUNT(*) AS total_customers FROM customers;
+SELECT AVG(age) AS average_age
+FROM customers;
+SELECT
+    MAX(total-price) AS
+highest-order_amount,
+    MIN(totel price) AS
+lowest_order-amount
+FROM orders;
+SELECT country, COUNT(*) AS
+totel_customers
+FROM customers
+GROUP BY country;
+SELECT city, AVG(age) AS average_age
+FROM BY city;
+SELECT customer_id, SUM(totel_price)
+AS totel_sales
+FROM orders
+GROUP BY customer_id;
+SELECT customer_id, COUNT(*) AS
+totel_orders
+FROM orders
+GROUP BY customer_id;
+SELECT country, SUM(totel_ price) AS
+totel_sales
+FROM orders
+GROUP BY country;
+SELECT country, SUM(totel_ price) AS
+totel_sales
+FROM orders
+GROUP BY country;
+SELECT MONTH(order_date) AS month,
+     sum(totel_price) AS
+totel_sales
+FROM orders
+GROUP BY MONTH(order_date);
