@@ -1,0 +1,29 @@
+INSERT INTO `customers`(`id`, `name`, `city`, `country`, `age`)
+VALUES 
+('[1]','[fatima]','[haripur]','[pakistan]','[26]'),
+('[2]','[amal]','[haripur]','[pakistan]','[25]'),
+('[3]','[ayesha]','[haripur]','[pakistan]','[23]'),
+('[4]','[hadia]','[haripur]','[pakistan]','[21]'),
+('[5]','[abiha]','[haripur]','[pakistan]','[20]');
+
+SELECT `id`, `name`, `city` FROM `customers` WHERE age>25;
+
+SELECT * FROM `customers` WHERE `country`='pakistan';
+
+INSERT INTO `customers`(`name`, `city`, `country`, `age`)
+ VALUES ('Ali','Lahore','Pakistan','28');
+
+INSERT INTO `orders`(`customer_id`, `product`, `quantity`, `total_price`)
+  VALUES ('2','Laptop','1','120000');
+
+ UPDATE `customers` SET `city`='Islamabad'WHERE 'customer_id'=3;
+
+UPDATE `orders` SET `quantity`=3 WHERE `id`=5; 
+
+DELETE FROM `customers` WHERE `id`=7; 
+
+SELECT * FROM `orders` WHERE `quantity`=0; 
+
+SELECT customers.name, orders.product, orders.quantity,orders.total_price
+ FROM orders 
+ INNER JOIN customers ON orders.customer_id=customer_id; 
