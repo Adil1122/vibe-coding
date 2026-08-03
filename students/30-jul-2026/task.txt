@@ -1,10 +1,36 @@
 Write a query to find the total number of customers in the customers table.
+SELECT COUNT(*) `id`FROM `customers`;
 Write a query to find the average age of all customers.
+SELECT AVG (`age`) AS  AVG_age  FROM `customers`;
 Write a query to find the highest and lowest order amount (total_price) from the orders table.
+SELECT MAX(`total-price`) AS LargestPrice
+FROM orders;
+SELECT MIN(`total-price`) SMALLESTPrice
+FROM orders;
 Write a query to display the total number of customers in each country using the GROUP BY clause.
+SELECT country, COUNT(id) AS "Number of Customers"
+FROM customers
+GROUP BY country;
 Write a query to display the average age of customers in each city.
+SELECT AVG (`age`) AS  AVG_age FROM `customers`
+GROUP BY `city`;
 Write a query to display the total quantity of products ordered by each customer. Show the customer_id and total quantity.
+SELECT SUM(quantity) AS totalProduct FROM `orders`
+GROUP BY `total-price`;
 Write a query to display the total sales (SUM(total_price)) made by each customer.
-Write a query to display the countries having more than 2 customers using the HAVING clause.
+SELECT customer_id, SUM(total_price) AS total_sales 
+FROM orders GROUP BY customer_id;
+Write a query to display the countries having more than 2 customers using the HAVING claUS.
+SELECT country, COUNT(*) AS total_customers 
+FROM customers GROUP BY country HAVING COUNT(*)>2;
 Write a query to display the customers whose total order amount is greater than 100000. Show the customer name and total order amount using an INNER JOIN, GROUP BY, and HAVING.
+SELECT name, SUM(total_price) AS total_order_amount 
+FROM customers 
+INNER JOIN orders ON customer_id=customer_id 
+GROUP BY customer_id, name 
+HAVING SUM(total_price)>10000
 Write a query to display the products that have been ordered more than 5 times in total. Show the product name and total quantity ordered using GROUP BY and HAVING.
+SELECT product_name, SUM(quantity) AS total_quantity_ordered 
+FROM orders 
+GROUP BY product_name 
+HAVING SUM(quantity)>5;
