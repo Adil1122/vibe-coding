@@ -1,0 +1,280 @@
+Here is a **combined assignment** that covers **HTML, JavaScript, JavaScript OOP, and MySQL CRUD queries**. It is suitable for beginners to intermediate students and is designed as a mini project.
+
+# Assignment: Student Management System
+
+## Objective
+
+Develop a simple **Student Management System** using HTML, JavaScript, JavaScript OOP concepts, and MySQL CRUD queries.
+
+---
+
+# Part 1 – HTML (20 Marks)
+
+Create the following webpage.
+
+### Requirements
+
+* Create a webpage with the title **Student Management System**
+* Add a heading.
+* Create a form containing:
+
+| Field         | Type          |
+| ------------- | ------------- |
+| Student Name  | Text          |
+| Age           | Number        |
+| Email         | Email         |
+| Gender        | Radio Buttons |
+| Department    | Dropdown      |
+| Skills        | Checkboxes    |
+| Date of Birth | Date          |
+| Address       | Textarea      |
+| Submit        | Button        |
+| Reset         | Button        |
+
+Use:
+
+* Labels
+* Placeholder
+* Required attribute
+* Proper HTML structure
+
+---
+
+# Part 2 – JavaScript Basics (20 Marks)
+
+Using JavaScript,
+
+### Task 1
+
+Validate the form.
+
+Conditions
+
+* Name cannot be empty.
+* Age should be greater than 16.
+* Email should be valid.
+* At least one skill must be selected.
+
+---
+
+### Task 2
+
+After successful validation,
+
+Display student information inside a table without refreshing the page.
+
+---
+
+### Task 3
+
+Provide buttons to
+
+* Delete Student
+* Edit Student
+
+---
+
+# Part 3 – JavaScript OOP (25 Marks)
+
+Create a class named
+
+```javascript
+Student
+```
+
+Properties
+
+```text
+id
+name
+age
+email
+department
+```
+
+Methods
+
+```javascript
+displayInfo()
+
+updateStudent()
+
+deleteStudent()
+```
+
+---
+
+Create another class
+
+```javascript
+StudentManager
+```
+
+Responsibilities
+
+* Add Student
+* Delete Student
+* Update Student
+* Search Student
+* Display All Students
+
+Store students inside an array.
+
+---
+
+# Part 4 – HTML + JavaScript (15 Marks)
+
+Add a search box.
+
+Requirements
+
+Search students by
+
+* Name
+* Department
+
+Display matching students instantly.
+
+---
+
+Add a total student counter.
+
+Example
+
+```
+Total Students : 10
+```
+
+---
+
+# Part 5 – MySQL Database (20 Marks)
+
+Create database
+
+```sql
+student_management
+```
+
+Create table
+
+```text
+students
+```
+
+Fields
+
+| Column     | Data Type                      |
+| ---------- | ------------------------------ |
+| id         | INT AUTO_INCREMENT PRIMARY KEY |
+| name       | VARCHAR(100)                   |
+| age        | INT                            |
+| email      | VARCHAR(100)                   |
+| gender     | VARCHAR(20)                    |
+| department | VARCHAR(100)                   |
+| address    | TEXT                           |
+| created_at | TIMESTAMP                      |
+
+---
+
+## Write SQL Queries
+
+### 1. Insert five students.
+
+---
+
+### 2. Display all students.
+
+---
+
+### 3. Display only Computer Science students.
+
+---
+
+### 4. Display students older than 20.
+
+---
+
+### 5. Display students sorted by name.
+
+---
+
+### 6. Display only name and email.
+
+---
+
+### 7. Update department of student with ID = 3.
+
+---
+
+### 8. Update email of student named "Ali".
+
+---
+
+### 9. Delete student with ID = 5.
+
+---
+
+### 10. Delete all students whose age is less than 18.
+
+---
+
+### 11. Count total students.
+
+---
+
+### 12. Find average age.
+
+---
+
+### 13. Find maximum age.
+
+---
+
+### 14. Find minimum age.
+
+---
+
+### 15. Display departments with total students using GROUP BY.
+
+---
+
+### 16. Display departments having more than two students using HAVING.
+
+---
+
+### 17. Search student by email.
+
+---
+
+### 18. Search student whose name starts with "A".
+
+---
+
+### 19. Display students whose age is between 18 and 25.
+
+---
+
+### 20. Display students whose department is either Computer Science or Software Engineering.
+
+---
+
+# Bonus Challenge (10 Marks)
+
+Implement the following features:
+
+* Store student data in **Local Storage**.
+* Add a **Dark Mode** toggle using JavaScript.
+* Display the current date and time.
+* Add confirmation before deleting a student.
+* Highlight students older than 25 with a different row color.
+
+---
+
+# Submission Requirements
+
+Students should submit:
+
+1. `index.html`
+2. `style.css`
+3. `script.js`
+4. SQL file containing all MySQL queries (`student_management.sql`)

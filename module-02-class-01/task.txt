@@ -1,0 +1,9 @@
+1. Download Node Js from https://nodejs.org/en/download
+2. Install windows installer
+3. Open Command Prompt by typing cmd in windows start panel
+4. Run following commands:
+node -v 
+npm -v
+5. If these commands run successfully then node is installed successfully.
+6. Go to directody D and Run this command:
+npx create-next-app@latest demo-next
