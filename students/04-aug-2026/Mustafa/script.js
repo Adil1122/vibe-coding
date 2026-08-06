@@ -1,5 +1,5 @@
 let students = [];
-
+let editIndex = -1;
 function validateForm() {
 
     let name = document.getElementById("name").value;
@@ -47,14 +47,30 @@ function validateForm() {
         dob: dob,
         address: address
     };
+// Check if student already exists
+for (let i = 0; i < students.length; i++) {
+    if (
+        i != editIndex &&
+        students[i].name === name &&
+        students[i].email === email
+    ) {
+        alert("Student already exists.");
+        return false;
+    }
+}
 
+// Add or Update
+if (editIndex == -1) {
     students.push(student);
+} else {
+    students[editIndex] = student;
+    editIndex = -1;
+}
 
-    displayStudents();
+displayStudents();
 
-   
+return false;
 
-    return false;
 }
 
 function displayStudents() {
@@ -114,7 +130,6 @@ function deleteStudent(index) {
     displayStudents();
 
 }
-
 function editStudent(index) {
 
     let student = students[index];
@@ -135,5 +150,11 @@ function editStudent(index) {
 
     document.getElementById("address").value = student.address;
 
-    deleteStudent(index);
+    document.getElementById("html").checked = student.skills.includes("HTML");
+    document.getElementById("css").checked = student.skills.includes("CSS");
+    document.getElementById("js").checked = student.skills.includes("JavaScript");
+    
+    editIndex = index;
+
+   
 }
