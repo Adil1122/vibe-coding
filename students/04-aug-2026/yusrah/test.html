@@ -20,7 +20,10 @@
             <br><br>
 
             <label for="gender">Gender:</label>
-            <input type="radio buttons" id="gender" name="gender">
+            <input type="radio" id="gender" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
             <br><br>
 
             <label for="department">Department:</label>
@@ -28,13 +31,13 @@
             <br><br>
 
             <label for="skills">Skills:</label>
-            <input type="checkboxes" id="skills" name="skills">
+            <input type="checkbox" id="skills" name="skills">
             <label for="archetict">Archetict</label>
-            <input type="checkboxes" id="archetict" name="archetict">
+            <input type="checkbox" id="archetict" name="archetict">
             <label for="artist">Artist</label>
-            <input type="checkboxes" id="artist" name="artist">
+            <input type="checkbox" id="artist" name="artist">
             <label for="Engineering">Engineering</label>
-            <input type="checkboxes" id="Engineering" name="Engineering">
+            <input type="checkbox" id="Engineering" name="Engineering">
             <br><br>
 
             <label for="date of birth">Date Of Birth:</label>
@@ -48,7 +51,24 @@
             <input type="button" value="submit" onclick="addstudent()">
             
             <input type="button" value="reset">
-
+            
         </form>
+        
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>gender</th>
+                <th>Department</th>
+                <th>Skills</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>delete</th>
+                <th>edit</th>   
+            </tr>
+            <tbody id="student_table">
+            </tbody>
+        </table>
     </body>
 </html>
