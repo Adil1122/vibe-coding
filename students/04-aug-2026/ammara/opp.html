@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>opp concepts</title>
+        <script>
+ //student class
+class student{
+    constructor(id, name,age,email,department){
+        this.id=id,
+        this.name=name;
+        this.age=age;
+        this.email=email;
+        this.department=department;
+    }
+    //display students Information
+    displayinfo(){
+        console.log("name:" = this.name);
+        console.log("id:" + this.id);
+        console.log("age:" + this.age);
+        console.log("email:" + this.email);
+        console.log("department:" + this.department)
+    }
+    //update studant Information
+    updatestudent(name,age,email,department){
+        this.name=name;
+        this.age=age;
+        this.email.email;
+        this.department=department;
+    }
+    //delete studants
+    deletestudants(){
+        this.id=null;
+        this.name=null,
+        this.age=null;
+        this.email=null;
+        this.department=null;
+    }
+    // student
+    //  manager class
+    class Studentmanager{
+          constructor(){
+            this.students=[];
+          }
+          //Add students
+          addstudent(student){
+            this.students.push(student);
+            console.log("student added successfully.");
+          }
+          //deletestudent
+          delete student(id){
+             const index=this.students.findindex(students>student.id===id);
+          }
+          if(index!==-1){
+            this.students.splice(index, 1);
+            console.log("student delete successfully.");
+          }
+          eles{
+            console.log("student not found.");
+          }
+    }
+     //Update student
+     updatestudent(id,name,age,email,department){
+        const student=this.students.find(student >student,id===id);
+        if(ifstudent){
+            student.updatestudent(name,age,email,department);
+            console.log("student updated successfully.");
+        }
+        else{
+            console.log("student not found.");
+        }
+     }
+     // search studentssearchstudent(id){
+     const student=this.students.find(student=>student.id===);
+
+     if(student){
+        student.displayinfo();
+     }
+     else{
+        console.log("student not found.");
+     }
+ }
+         //display all studants
+       dispayalstudent(){
+        if(this.students.length===0){
+            console.log("no student available.");
+            return;
+        }
+        this. students.foreach(student=>student.displayinfo());
+       }
+   }
+   </script>
+   </head>
+   <body>
+    <h2>opp task</h2>
+   </body>
+   </html>
