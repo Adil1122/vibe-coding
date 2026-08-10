@@ -11,21 +11,25 @@ function validateForm() {
     let dob = document.getElementById("dob").value;
     let address = document.getElementById("address").value;
 
+    // Name check
     if (name === "") {
         alert("Name cannot be empty.");
         return false;
     }
 
+    // Age check
     if (age <= 16) {
         alert("Age should be greater than 16.");
         return false;
     }
 
-    if (email === "" || !email.includes("@")) {
+    // Email check
+    if (!email.includes("@")) {
         alert("Please enter a valid email.");
         return false;
     }
-
+   
+    // Skills check
     if (skills.length === 0) {
         alert("Please select at least one skill.");
         return false;
@@ -47,7 +51,7 @@ function validateForm() {
         dob: dob,
         address: address
     };
-// Check if student already exists
+
 for (let i = 0; i < students.length; i++) {
     if (
         i != editIndex &&
@@ -72,7 +76,7 @@ displayStudents();
 return false;
 
 }
-
+// display students
 function displayStudents() {
 
     let tableBody = document.getElementById("studentTableBody");
@@ -82,6 +86,7 @@ function displayStudents() {
 
         let student = students[i];
 
+     // Add rows in the table
         let row = tableBody.insertRow();
 
         let nameCell = row.insertCell(0);
@@ -124,12 +129,15 @@ function displayStudents() {
     }
 }
 
+// Delete students
 function deleteStudent(index) {
 
     students.splice(index, 1);
     displayStudents();
 
 }
+
+// Edit students
 function editStudent(index) {
 
     let student = students[index];
@@ -138,9 +146,12 @@ function editStudent(index) {
     document.getElementById("age").value = student.age;
     document.getElementById("email").value = student.email;
 
-    if (student.gender == "male") {
+    if (student.gender == "male")
+    {
         document.getElementById("male").checked = true;
-    } else {
+    } 
+    else 
+    {
         document.getElementById("female").checked = true;
     }
 
