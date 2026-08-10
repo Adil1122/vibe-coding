@@ -1,0 +1,97 @@
+
+<html>
+<head>
+    <title>Student Management</title>
+</head>
+<body>
+
+<script>
+
+class Student {
+
+    constructor(id, name, age, email, department) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.department = department;
+    }
+
+    displayInfo() {
+        console.log("ID:", this.id);
+        console.log("Name:", this.name);
+        console.log("Age:", this.age);
+        console.log("Email:", this.email);
+        console.log("Department:", this.department);
+    }
+
+    updateStudent(name, age, email, department) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.department = department;
+    }
+
+    deleteStudent() {
+        console.log("Student deleted:", this.name);
+    }
+}
+
+
+class StudentManager {
+
+    constructor() {
+        this.students = [];
+    }
+
+    addStudent(student) {
+        this.students.push(student);
+    }
+
+    displayStudents() {
+        this.students.forEach(student => {
+            student.displayInfo();
+        });
+    }
+
+    deleteStudent(id) {
+        this.students = this.students.filter(student => student.id !== id);
+    }
+}
+
+
+// Create students
+
+let student1 = new Student(
+    1,
+    "Ali",
+    25,
+    "ali@gmail.com",
+    "IT"
+);
+
+let student2 = new Student(
+    2,
+    "Daniyal",
+    23,
+    "daniyal@gmail.com",
+    "Computer Science"
+);
+
+
+// Student Manager
+
+let manager = new StudentManager();
+
+manager.addStudent(student1);
+manager.addStudent(student2);
+
+
+// Display students
+
+manager.displayStudents();
+
+</script>
+</body>
+</html>
+    
