@@ -1,49 +1,97 @@
 <html>
     <head>
-        <title>student Management System</title>
+        <title>student management system</title>
+        <script> src="scripts/common.js"</script>
     </head>
     <body>
-        <h1>student Management System</h1>
+        <h1>student management system</h1>
         <form>
-             <label for="name">Name:</label>
+            rm>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name">
             <br><br>
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email">
             <br><br>
+
             <label for="age">Age:</label>
             <input type="number" id="age" name="age">
             <br><br>
 
-
-            <label> gender:</label>
-            <input type="radio"id= "male" name="gender" value="male" required>
+           <label for=> Gender:</label>
+            <input type="radio" id="male" name="Gender"
+            value="male" required>
             <label for="male">male</label>
-            <input type="radio" id="female" name="gender" value="female" required>
-            <label for="female">female</label>
 
+            
+            <input type="radio" id="female" name="Gender"
+            value="female" required>
+             <label for="female">female</label>
 
             <br><br>
-            <label for="department">department:</label>
-            <input type="text"id="department"
-            name="department">
+
+            <label for="department"> Department:</label>
+             <select id="dropdown" name="department">
+                <option value= "it">information tecnology></option>
+                <option value="ee">elctrical engineering></option>
+                <option value="me">mechanical engineering</option>
+                <option value="cs">computer science</option>
+            </select>
+
+            <label  >skill:</label>
+            <input type="checkbox" id="programing" name="skills"
+            value="programing">
+            <label for="programing">programing</label><br>
+            <input type="checkbox" id="design" name="skills" value="design">
+            <label>design:</label>
             <br><br>
             
-            <label for="skills">skills:</label>
-            <input type="checkbox"id= "skills" name="skills">
+            
+
+            <label for="date of birth"> date of birth:</label>
+            <input type="date" id="date of birth" name="Date of birth"
+            value="date of birth">
             <br><br>
 
-             <label for="date of birth">date of birth:</label>
-             <input type="date" id="date" name="date of birth">
-             <br><br>
+            <label for="Address "> Address:</label>
+              <textarea id="Address"  name="Address"
+              rows="4" cols="50"> </textarea>
+              <br><br>
 
-            <label for="address">Address</label>
-            <input type="textarea" id="address" name="address">
+
+             <label for="Submit"> Submit:</label>
+            <input type="Submit" id="Submit" name="submit"
+            value="submit">
             <br><br>
 
-            <input type="button" value="submit">
-
-            <input type="submit" value="Submit">
+            <label for=" Reset">  Reset:</label>
+            <input type="button" id=" Reset" name="Reset"
+            value=" Reset ">
+            <br><br>
+            <input type="button" value="validateform" onclick="validateform()">
+            
         </form>
-    </body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Skill</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>skills</th>
+                    <th>Address</th>
+                    <th>Date of Birth</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="validateform">
+            </tbody>
+        </table>
+        
+    </body>>
 </html>
