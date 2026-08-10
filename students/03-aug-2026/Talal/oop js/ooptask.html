@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>Student OOP</title>
+</head>
+<body>
+
+    <h1>Student Information</h1>
+<script>
+class Student {
+    constructor(id, name, age, email, department) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.department = department;
+    }
+
+    displayInfo() {
+        console.log("Student ID:", this.id);
+        console.log("Name:", this.name);
+        console.log("Age:", this.age);
+        console.log("Email:", this.email);
+        console.log("Department:", this.department);
+    }
+
+    updateStudent(name, age, email, department) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.department = department;
+
+        console.log("Student information updated successfully.");
+    }
+
+}
+
+let student1 = new Student(
+    101,
+    "talal",
+    20,
+    "ta0lalfayyaz328@gmail.com",
+    "accounting & finance"
+);
+
+student1.displayInfo();
+
+student1.updateStudent(
+    "Ali Khan",
+    21,
+    "alikhan@example.com",
+    "Software Engineering"
+);
+
+console.log("\nAfter Update:");
+student1.displayInfo();
+
+
+student1.deleteStudent();
+
+console.log("\nAfter Delete:");
+student1.displayInfo();
+
+</script>
+
+</body>
+</html>
