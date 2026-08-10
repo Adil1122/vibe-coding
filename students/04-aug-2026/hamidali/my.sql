@@ -10,9 +10,9 @@ SELECT * FROM students ORDER BY name;
 Display only name and email.
 SELECT name,email FROM students;
  Update department of student with ID = 3.
- UPDATE students SET department = 'science' WHERE ID = 3;
+ UPDATE students SET department = 'computer science' WHERE ID = 3;
   Update email of student named "Ali".
-  UPDATE students SET email = 'bkbbu@gmail.com' WHERE name = 'ali';
+  UPDATE students SET email = 'ali@gmail.com' WHERE name = 'ali';
   Delete student with ID = 5.
   DELETE FROM students WHERE id = 5;
   Delete all students whose age is less than 18.
@@ -27,10 +27,10 @@ SELECT COUNT(*) FROM students;
  SELECT department, COUNT(ID) AS "Number of students" FROM students GROUP BY department;
  SELECT department, COUNT(ID) AS "Number of students" FROM students GROUP BY department HAVING COUNT(ID) > 2;
   Search student by email.
-  SELECT * FROM `students` WHERE email = 'ijkl@gmail.com';
+  SELECT * FROM `students` WHERE email = 'ali@gmail.com';
   Search student whose name starts with "A".
   SELECT * FROM students WHERE name LIKE 'z%';
    Display students whose age is between 18 and 25.
    SELECT * FROM `students` WHERE age BETWEEN '18' and '21';
-    Display students whose department is either Computer Science or Software Engineering.
-    SELECT * FROM `students` WHERE department ='soft engineering';
+    Display students whose department is Computer Science or bs Engineering.
+    SELECT * FROM `students` WHERE department ='bs engineering';
