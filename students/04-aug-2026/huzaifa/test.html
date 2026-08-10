@@ -1,11 +1,14 @@
 <html>
     <head>
         <title> Student Managment System</title>
+         <script src="script/common.js"></script>
+    </head>
         <body>
             <h1>This is a task</h1>
+
             <form>
                 <label for="student name">Student Name</label>
-                <input type="text" iD="Student Name" name="student name">
+                <input type="text" id="student_name" name="student_name">
                 <br><br> 
 
                <label for="age">Age<label>
@@ -25,10 +28,15 @@
                 <br><br>
                 
                  <label for="skills">Skills<label>
-                <input type="checkboxes" id="skills" name="skills">         
+                    <input type="checkbox" id="programming" name="skills" value="Programming">
+                    <label for="programming">Programming</label><br>
+                    <input type="checkbox" id="design" name="skills" value="Design">
+                    <label for="design">Design</label><br>
+                    <input type="checkbox" id="management" name="skills" value="Management">
+                    <label for="management">Management</label>
                 <br><br>
                 
-                <label for="date od birth">Date od birth<label>
+                <label for="date of birth">Date of Birth</label>
                 <input type="date" id="date of birth" name="date of birth">      
                 <br><br>
 
@@ -36,10 +44,10 @@
                 <input type="textarea" id="adress" name="adress">      
                 <br><br>
 
-                <input type="button" value="submit">
+                <input type="button" value="submit" onclick="addstudent()">
+
                 <input type="button" value="reset">        
                 
             </form>
         </body>
-    </head>
 </html>

@@ -1,12 +1,5 @@
-Here is a **combined assignment** that covers **HTML, JavaScript, JavaScript OOP, and MySQL CRUD queries**. It is suitable for beginners to intermediate students and is designed as a mini project.
 
-# Assignment: Student Management System
 
-## Objective
-
-Develop a simple **Student Management System** using HTML, JavaScript, JavaScript OOP concepts, and MySQL CRUD queries.
-
----
 
 # Part 1 – HTML (20 Marks)
 
@@ -80,7 +73,6 @@ Create a class named
 
 ```javascript
 Student
-```
 
 Properties
 

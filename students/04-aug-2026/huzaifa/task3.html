@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Student Management System</title>
-    <script src="script.js"></script>
+    <script src="script/common.js"></script>
 </head>
 <body>
     <h1>Student Management system</h1>
-    <form id="studentForm" onsubmit="return validateForm()">
+    <form>
 
         <label for ="name">Student Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter student name" required>
@@ -50,7 +50,7 @@
         <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
         <br><br>
         
-        <input type="submit" value="Submit">
+        <input type="Submit" value="Submit" onclick="return validateForm()">
         <input type="Reset" value="Reset">
 
     </form>
@@ -64,9 +64,6 @@
                 <th>Skills</th>
                 <th>Date of Birth</th>
                 <th>Address</th>
-                <th>Edit</th>
-                <th>Delete</th>
-                
             </tr>
             <tbody id="studentTableBody">
             </tbody>

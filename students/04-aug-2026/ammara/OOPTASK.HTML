@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>opp concepts</title>
+        <script>
+ //student class
+    class student {
+    constructor(id, name,age,email,department){
+        this.id=id,
+        this.name=name;
+        this.age=age;
+        this.email=email;
+        this.department=department;
+    }
+    //display students Information
+    displayinfo(){
+        console.log("name:" = this.name);
+        console.log("id:" + this.id);
+        console.log("age:" + this.age);
+        console.log("email:" + this.email);
+        console.log("department:" + this.department)
+    }
+    //update studant Information
+    updatestudent(name,age,email,department){
+        this.name=name;
+        this.age=age;
+        this.email.email;
+        this.department=department;
+    }
+    //delete studants
+    deletestudants(){
+        this.id=null;
+        this.name=null,
+        this.age=null;
+        this.email=null;
+        this.department=null;
+    }
+}
+    // student
+    //  manager class
+    class Studentmanager{
+          constructor(){
+            this.students=[];
+          }
+          //Add students
+          add_student(student){
+            this.students.push(student);
+            console.log("student added successfully.");
+          }
+          //deletestudent
+          delete_student(id){
+             const index=this.students.findindex(students>student.id===id);
+          if(index!==-1){
+            this.students.splice(index, 1);
+            console.log("student delete successfully.");
+          }
+          else{
+            console.log("student not found.");
+          }
+    }
+     //Update student
+     updatestudent(id,name,age,email,department){
+        const student=this.students.find(student >student,id===id);
+        if(ifstudent){
+            student.updatestudent(name,age,email,department);
+            console.log("student updated successfully.");
+        }
+        else{
+            console.log("student not found.");
+        }
+     }
+ }
+         //display all studants
+    class dispayalstudent{
+            constructor(id, name, age, email, department) {
+                this.id = id;
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.department = department;
+            }
+            displayInfo() {
+                console.log(this.id);
+                console.log(this.name);
+                console.log(this.age);
+                console.log(this.email);
+                console.log(this.department);
+            }
+            updateStudent(name, age, email, department) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.department = department;
+            }
+            deleteStudent () {
+                console.log("Student deleted");
+            }
+        } 
+        class StudentManager {
+            constructor() {
+                this.students = [];
+            }
+            addStudent(student) {
+                this.students.push(student);
+            }
+            displayAllStudents() {
+                for(let i = 0; i < this.students.length; i++) {
+                    this.students[i].displayInfo(); 
+                };
+            }
+            searchStudentById(id) {
+                for(let i = 0; i < this.students.length; i++) {
+                    if(this.students[i].id == id) {
+                        this.students[i].displayInfo();
+                        return;
+                    }
+                }
+                console.log("Student not found");
+            }
+            deleteStudentById(id) {
+                for(let i = 0; i < this.students.length; i++) {
+                    if(this.students[i].id == id) {
+                        this.students.splice(i, 1);
+                        console.log("Student deleted");
+                        return;
+                    }
+                }
+                console.log("Student not found");
+            }
+            updateStudentById(id, name, age, email, department) {
+                for(let i = 0; i < this.students.length; i++) {
+                    if(this.students[i].id == id) {
+                        this.students[i].updateStudent(name, age, email, department);
+                        console.log("Student updated");
+                        return;
+                    }
+                }
+                console.log("Student not found");
+            }
+        }
+        this. students.foreach(student=>student.displayinfo());
+   
+            const manager = new StudentManager();
+        const student1 = new Student(1, "unaiza", 19, "unaiza@gmail.com", "Information Technology");
+        
+        const student2 = new Student(2, "minal", 21, "minal@gmail.com", "Computer Science");
+        
+        // Add Students
+        manager.addStudent(student1);
+        manager.addStudent(student2);
+
+        //Display All Students
+        manager.displayAllStudents();
+
+        //Search Student
+        manager.searchStudentById(1);
+
+        //Update Student
+        manager.updateStudentById(2, "sidra", 23, "sidra@gmail.com", "Business Administration");
+        
+        // Display All Students
+        manager.displayAllStudents();
+
+        // Delete Student
+        manager.deleteStudentById(1);
+
+        // Display Remaining Students
+        manager.displayAllStudents();
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
