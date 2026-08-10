@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Student Management System</title>
@@ -5,7 +6,7 @@
 </head>
 <body>
     <h1>Student Management system</h1>
-    <form id="studentForm" onsubmit="return validateForm()">
+    <form>
 
         <label for ="name">Student Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter student name" required>
@@ -17,28 +18,22 @@
         <input type="email" id="email" name="email" placeholder="Enter your email"required>
         <br><br>
 
-        <label> Gender:</label><br>
+        <label> Gender:</label>
         <input type="radio" id="male" name="gender" value="male" required>
         <label for="male">Male</label>
-
         <input type="radio" id="female" name="gender" value="female" required>
         <label for="female">Female</label>
-
-        <input type="radio" id="other" name="gender" value="Other" required>
-        <label for="other">Other</label>
         <br><br>
         
-        <label for ="department">Department:</label><br>
+        <label for ="department">Department:</label>
 
         <select id="department" name ="department" required>
-            <option value="">Select Department</option>
             <option value="CS">Computer Science </option>
-            <option value="IT">Information Technology </option>
-            <option value="BBA">Business Administration </option>
-            <option value="MLT">Medical Lab Techonology</option>
+            <option value="IT">Information Technology</option>
+            <option value="SE">Software Engineering</option>
         </select>
         <br><br>
-        <label> Skills:</label><br>
+        <label> Skills:</label>
         <input type="checkbox" id="html" name="skills" value="HTML">
         <label for="html">HTML</label>
         <input type="checkbox" id="css" name="skills" value="CSS">
@@ -47,15 +42,15 @@
         <label for="js">JavaScript</label>
         <br><br>
 
-        <label for="dob">Date of Birth:</label><br>
+        <label for="dob">Date of Birth:</label>
         <input type ="date" id ="dob" name="dob" required>
         <br><br>
         
-        <label for="address">Address:</label><br>
-        <textarea id="address" name="address" row="4" cols="25" placeholder="Enter your address" required></textarea>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
         <br><br>
         
-        <input type="submit" value="Submit">
+        <input type="Submit" value="Submit" onclick="return validateForm()">
         <input type="Reset" value="Reset">
 
     </form>
@@ -69,9 +64,6 @@
                 <th>Skills</th>
                 <th>Date of Birth</th>
                 <th>Address</th>
-                <th>Edit</th>
-                <th>Delete</th>
-                
             </tr>
             <tbody id="studentTableBody">
             </tbody>

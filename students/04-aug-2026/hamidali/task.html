@@ -1,0 +1,56 @@
+<html>
+    <head>
+      <title>student management system</title>
+         <script src="scripts/task2.js"></script>
+    </head>
+    <body>
+        <h1>Student Management System</h1>
+        <form>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName"><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br><br>
+
+            <label for ="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <br><br>
+            <label for ="department">Department:</label>
+            <select id="department" name="department">
+                <option value="cs">Computer Science</option>
+                <option value="ee">Electrical Engineering</option>
+                <option value="me">Mechanical Engineering</option>
+            </select>
+
+            <br><br>
+
+            <label>Skills:</label><br>
+            <input type="checkbox" id="programming" name="skills" value="programming">
+            <label for="programming">Programming</label><br>
+            <input type="checkbox" id="design" name="skills" value="design">
+            <label for="design">Design</label><br>
+
+            <br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address"
+            rows="4" cols="50"></textarea>
+            
+            <br><br> 
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            
+            <br><br>
+
+            <input type="submit" value="Submit" onclick="return validateForm()">
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>

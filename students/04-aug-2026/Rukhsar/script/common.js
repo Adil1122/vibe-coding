@@ -1,56 +1,92 @@
 let students = [];
+let editIndex = -1;
+function validateForm() {
 
-function addstudent() {
-    let student_name = document.getElementById('student_name').value;
-    let age = document.getElementById('age').value;
-    let email = document.getElementById('email').value;
-    let skills = document.querySelectorAll('input[name="skills"]:checked');
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let email = document.getElementById("email").value;
     let gender = document.querySelector('input[name="gender"]:checked');
-    let dob = document.getElementById('dob').value;
-    let address = document.getElementById('address').value;
-    let department = document.getElementById('department').value;
-    
-    if(student_name == '') {
-        alert('student name must be filled')
-        return;
+    let department = document.getElementById("department").value;
+    let skills = document.querySelectorAll('input[name="skills"]:checked');
+    let dob = document.getElementById("dob").value;
+    let address = document.getElementById("address").value;
+
+    // Name check
+    if (name === "") {
+        alert("Name cannot be empty.");
+        return false;
     }
-    
-    if(age<=16) {
-        alert('age mest be greater than 16')
-        return;
+
+    // Age check
+    if (age <= 16) {
+        alert("Age should be greater than 16.");
+        return false;
     }
-    if (email === "" || !email.includes("@")) {
+
+    // Email check
+    if (!email.includes("@")) {
         alert("Please enter a valid email.");
         return false;
     }
-    if(skills.length === 0){
-        alert('Atleast one skill must be selected')
-        return;
+   
+    // Skills check
+    if (skills.length === 0) {
+        alert("Please select at least one skill.");
+        return false;
     }
 
-    let student = {  
-        name:student_name,
-        age:age,
-        email:email,
-        skills: skills,
-        gender: gender,
-        dateOfBirth: dob,
-        address: address,
-        department: department
+    let skillList = [];
+
+    for (let i = 0; i < skills.length; i++) {
+        skillList.push(skills[i].value);
     }
-    students.push(student);
-    console.log(students);
-    displayStudents();
+
+    let student = {
+        name: name,
+        age: age,
+        email: email,
+        gender: gender.value,
+        department: department,
+        skills: skillList.join(", "),
+        dob: dob,
+        address: address
+    };
+
+for (let i = 0; i < students.length; i++) {
+    if (
+        i != editIndex &&
+        students[i].name === name &&
+        students[i].email === email
+    ) {
+        alert("Student already exists.");
+        return false;
+    }
 }
 
+// Add or Update
+if (editIndex == -1) {
+    students.push(student);
+} else {
+    students[editIndex] = student;
+    editIndex = -1;
+}
+
+displayStudents();
+
+return false;
+
+}
+// display students
 function displayStudents() {
 
     let tableBody = document.getElementById("studentTableBody");
     tableBody.innerHTML = "";
-     for (let i = 0; i < students.length; i++) {
+
+    for (let i = 0; i < students.length; i++) {
 
         let student = students[i];
 
+     // Add rows in the table
         let row = tableBody.insertRow();
 
         let nameCell = row.insertCell(0);
@@ -63,8 +99,8 @@ function displayStudents() {
         let addressCell = row.insertCell(7);
         let editCell = row.insertCell(8);
         let deleteCell = row.insertCell(9);
-    }
-     nameCell.innerHTML = student.name;
+
+        nameCell.innerHTML = student.name;
         ageCell.innerHTML = student.age;
         emailCell.innerHTML = student.email;
         genderCell.innerHTML = student.gender;
@@ -91,8 +127,9 @@ function displayStudents() {
 
         deleteCell.appendChild(deleteButton);
     }
+}
 
-
+// Delete students
 function deleteStudent(index) {
 
     students.splice(index, 1);
@@ -100,6 +137,7 @@ function deleteStudent(index) {
 
 }
 
+// Edit students
 function editStudent(index) {
 
     let student = students[index];
@@ -108,22 +146,26 @@ function editStudent(index) {
     document.getElementById("age").value = student.age;
     document.getElementById("email").value = student.email;
 
-    if (student.gender == "male") {
+    if (student.gender == "male")
+    {
         document.getElementById("male").checked = true;
-    } else {
+    } 
+    else 
+    {
         document.getElementById("female").checked = true;
     }
 
     document.getElementById("department").value = student.department;
 
-    document.getElementById("dob").value = student.dateOfBirth;
+    document.getElementById("dob").value = student.dob;
 
     document.getElementById("address").value = student.address;
 
-    deleteStudent(index);
+    document.getElementById("html").checked = student.skills.includes("HTML");
+    document.getElementById("css").checked = student.skills.includes("CSS");
+    document.getElementById("js").checked = student.skills.includes("JavaScript");
+    
+    editIndex = index;
+
+   
 }
-
-
-
-
-

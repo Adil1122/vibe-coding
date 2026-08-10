@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>student Management System</title>
+         <script src="scripts/task2.js"></script>
+    </head>
+    <body>
+        <h1>student Management System</h1>
+        <form>
+            <label for="studentname">student name:</label>
+            <input type="text" id="studentname" name="studentname"><br><br>
+            <label for="age">age:</label>
+            <input type="number" id="age" name="age"><br><br>
+            
+            <label for ="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label>gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <br><br>
+            <label for="department">Department:</label>
+            <select id="department" name="department">
+                <option value="cs">computer science</option>
+                <option value="ee">electrical engineering</option>
+                <option value="me">mechanical engineering</option>
+            </select>
+
+            <br><br>
+
+            <label>skills:</label><br>
+            <input type="checkbox" id="programing" name="skills" value="programing">
+            <label for="programing">Programing</label><br>
+            <input type="checkbox" id="design" name="skills" value="design">
+            <label for="design">Design</label><br>
+
+            <br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address"
+            rows="4" cols="50"></textarea>
+
+            <br><br>
+
+            <label for="dob">date of birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <br><br>
+
+            <input type="button" value="Submit" onclick="return validateForm()">
+            <input type="reset" value="Reset">
+        </form>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>studentname</th>
+                    <th>age</th>
+                    <th>Email</th>
+                    <th>gender</th>
+                    <th>Department</th>
+                    <th>Skills</th>
+                    <th>Address</th>
+                    <th>Date of birth</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+              </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+            </tbody>
+        </table>
+    </body>
+</html>
+    </body>
+</html>
