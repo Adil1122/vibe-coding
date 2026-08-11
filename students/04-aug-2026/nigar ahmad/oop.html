@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>student management </title>
+        <script>
+            class Student {
+                 
+                constructor (id,name,age,email,department) {
+
+                    this.id = id;
+                    this.name = name;
+                    this.age = age;
+                    this.email = email;
+                    this.department = department;
+                }
+
+               displayinfo() {
+                 console.log("ID", this.id);
+                 console.log("NAME", this.name);
+                 console.log("age", this.age);
+                 console.log("email", this.email);
+                 console.log("department", this.department);
+               }
+               updatestudents(name,age,email,department) {
+                 this.name = name;
+                 this.age = age;
+                 this.email = email;
+                 this.department = department;
+               }
+                deletestudent() {
+                console.log("student deleted" ,this.name)
+                }
+
+            }
+            class studentmanager {
+            
+                constructor () {
+                this.Student = Student;
+            
+                }
+
+                AddStudent () {
+                this.students = (student);
+                }
+                displaystudent() {
+                this.student = (student);
+                student.displayinfo ();
+                }
+                deletestudent() {
+                this.student = ( student => student.id !== id);
+                
+                }
+
+            }
+            // create students
+
+            let students1 = new Student(1,"Ali","ali@gmail.com","IT")
+            //Student Manager
+            let manager = new studentManager();
+            //Display students
+            manager.displaystudents();
+
+        </script>
+        </body>
+        </html>
