@@ -1,5 +1,5 @@
 let students = [];
-let editIndex = -1;
+
 function validateForm() {
 
     let name = document.getElementById("name").value;
@@ -47,30 +47,14 @@ function validateForm() {
         dob: dob,
         address: address
     };
-// Check if student already exists
-for (let i = 0; i < students.length; i++) {
-    if (
-        i != editIndex &&
-        students[i].name === name &&
-        students[i].email === email
-    ) {
-        alert("Student already exists.");
-        return false;
-    }
-}
 
-// Add or Update
-if (editIndex == -1) {
     students.push(student);
-} else {
-    students[editIndex] = student;
-    editIndex = -1;
-}
 
-displayStudents();
+    displayStudents();
 
-return false;
+   
 
+    return false;
 }
 
 function displayStudents() {
@@ -95,14 +79,14 @@ function displayStudents() {
         let editCell = row.insertCell(8);
         let deleteCell = row.insertCell(9);
 
-        nameCell.innerHTML = student.name;
-        ageCell.innerHTML = student.age;
-        emailCell.innerHTML = student.email;
-        genderCell.innerHTML = student.gender;
-        departmentCell.innerHTML = student.department;
-        skillsCell.innerHTML = student.skills;
-        dobCell.innerHTML = student.dob;
-        addressCell.innerHTML = student.address;
+        nameCell.innerHTML = name;
+        ageCell.innerHTML = age;
+        emailCell.innerHTML = email;
+        genderCell.innerHTML = gender;
+        departmentCell.innerHTML = department;
+        skillsCell.innerHTML = skills;
+        dobCell.innerHTML = dob;
+        addressCell.innerHTML = address;
 
         let editButton = document.createElement("button");
         editButton.innerHTML = "Edit";
@@ -130,13 +114,14 @@ function deleteStudent(index) {
     displayStudents();
 
 }
+
 function editStudent(index) {
 
     let student = students[index];
 
-    document.getElementById("name").value = student.name;
-    document.getElementById("age").value = student.age;
-    document.getElementById("email").value = student.email;
+    document.getElementById("name").value = name;
+    document.getElementById("age").value = age;
+    document.getElementById("email").value = email;
 
     if (student.gender == "male") {
         document.getElementById("male").checked = true;
@@ -144,17 +129,11 @@ function editStudent(index) {
         document.getElementById("female").checked = true;
     }
 
-    document.getElementById("department").value = student.department;
+    document.getElementById("department").value = department;
 
-    document.getElementById("dob").value = student.dob;
+    document.getElementById("dob").value = dob;
 
-    document.getElementById("address").value = student.address;
+    document.getElementById("address").value = address;
 
-    document.getElementById("html").checked = student.skills.includes("HTML");
-    document.getElementById("css").checked = student.skills.includes("CSS");
-    document.getElementById("js").checked = student.skills.includes("JavaScript");
-    
-    editIndex = index;
-
-   
+    deleteStudent(index);
 }

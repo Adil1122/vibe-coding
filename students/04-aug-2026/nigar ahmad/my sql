@@ -1,0 +1,90 @@
+  1)Insert 5 students 
+
+ Insert INTO students (id, name, age, email, department)
+VALUES
+(1, 'Ali', 20, 'ali@gmail.com', 'Computer Science'),
+(2, 'Ahmed', 22, 'ahmed@gmail.com', 'Software Engineering'),
+(3, 'Ayesha', 19, 'ayesha@gmail.com', 'Computer Science'),
+(4, 'Sara', 24, 'sara@gmail.com', 'Business'),
+(5, 'Usman', 17, 'usman@gmail.com', 'Computer Science');
+
+2) Display all students
+SELECT * FROM students;
+
+3)Display only Computer Science students
+SELECT * FROM students
+where department = 'Computer Science';
+
+4)Display students older than 20
+SELECT * FROM students where age > 20;
+
+5)Display students sorted by name.
+SELECT * FROM students order by name;
+
+6)Display only name and email
+SELECT name, email FROM students;
+
+7)Update department of student with ID = 3
+Update students set department = 'Software Engineering' where id = 3;
+
+8)Update email of student named "Ali"
+update students set email = 'ali123@gmail.com' where name = 'Ali';
+
+9)Delete student with ID = 5
+DELETE FROM students where id = 5;
+
+10)Delete all students whose age is less than 18
+DELETE FROM students where age < 18;
+
+11)Count total students
+SELECT Count(*) AS total_students FROM students;
+
+12)Find average age
+SELECT Avg(age) AS average_age FROM students;
+
+13)Find maximum age
+SELECT Max(age) AS maximum_age FROM students;
+
+14)Find minimum age
+SELECT Min(age) AS minimum_age FROM students;
+
+15)Display departments with total students using Group by
+SELECT department, Count(*) AS total_students FROM students
+Group by department;
+
+16)Display departments having more than two students using HAVING
+SELECT department, COUNT(*) AS total_students FROM students
+Group by department Having Count(*) > 2;
+
+17)Search student by email
+SELECT * FROM students Where email = 'ali@gmail.com';
+
+18)Search student whose name starts with "A"
+SELECT * FROM students Where name like 'A%';
+
+19)Display students whose age is between 18 and 25
+SELECT * FROM students Where age Between 18 and 25;
+
+20)Display students whose department is either Computer Science or Software Engineering
+ SELECT * FROM students Where department in ('Computer Science', 'Software Engineering');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

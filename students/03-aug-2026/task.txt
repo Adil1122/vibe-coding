@@ -73,7 +73,6 @@ Create a class named
 
 ```javascript
 Student
-```
 
 Properties
 

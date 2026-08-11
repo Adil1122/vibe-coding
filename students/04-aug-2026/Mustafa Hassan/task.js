@@ -1,33 +1,18 @@
 let students = [];
-let editIndex = -1;
+
 function validateForm() {
 
-    let name = document.getElementById("name").value;
-    let age = document.getElementById("age").value;
-    let email = document.getElementById("email").value;
-    let gender = document.querySelector('input[name="gender"]:checked');
-    let department = document.getElementById("department").value;
-    let skills = document.querySelectorAll('input[name="skills"]:checked');
-    let dob = document.getElementById("dob").value;
-    let address = document.getElementById("address").value;
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var email = document.getElementById("email").value;
+    var gender = document.querySelector('input[name="gender"]:checked');
+    var department = document.getElementById("department").value;
+    var skills = document.querySelectorAll('input[name="skills"]:checked');
+    var dob = document.getElementById("dob").value;
+    var address = document.getElementById("address").value;
 
     if (name === "") {
         alert("Name cannot be empty.");
-        return false;
-    }
-
-    if (age <= 16) {
-        alert("Age should be greater than 16.");
-        return false;
-    }
-
-    if (email === "" || !email.includes("@")) {
-        alert("Please enter a valid email.");
-        return false;
-    }
-
-    if (skills.length === 0) {
-        alert("Please select at least one skill.");
         return false;
     }
 
@@ -47,35 +32,19 @@ function validateForm() {
         dob: dob,
         address: address
     };
-// Check if student already exists
-for (let i = 0; i < students.length; i++) {
-    if (
-        i != editIndex &&
-        students[i].name === name &&
-        students[i].email === email
-    ) {
-        alert("Student already exists.");
-        return false;
-    }
-}
 
-// Add or Update
-if (editIndex == -1) {
     students.push(student);
-} else {
-    students[editIndex] = student;
-    editIndex = -1;
+
+    displayStudents();
+
+    return false;
 }
 
-displayStudents();
-
-return false;
-
-}
 
 function displayStudents() {
 
     let tableBody = document.getElementById("studentTableBody");
+
     tableBody.innerHTML = "";
 
     for (let i = 0; i < students.length; i++) {
@@ -105,6 +74,7 @@ function displayStudents() {
         addressCell.innerHTML = student.address;
 
         let editButton = document.createElement("button");
+
         editButton.innerHTML = "Edit";
 
         editButton.onclick = function () {
@@ -113,7 +83,9 @@ function displayStudents() {
 
         editCell.appendChild(editButton);
 
+
         let deleteButton = document.createElement("button");
+
         deleteButton.innerHTML = "Delete";
 
         deleteButton.onclick = function () {
@@ -124,12 +96,16 @@ function displayStudents() {
     }
 }
 
+
 function deleteStudent(index) {
 
     students.splice(index, 1);
+
     displayStudents();
 
 }
+
+
 function editStudent(index) {
 
     let student = students[index];
@@ -150,11 +126,5 @@ function editStudent(index) {
 
     document.getElementById("address").value = student.address;
 
-    document.getElementById("html").checked = student.skills.includes("HTML");
-    document.getElementById("css").checked = student.skills.includes("CSS");
-    document.getElementById("js").checked = student.skills.includes("JavaScript");
-    
-    editIndex = index;
-
-   
+    deleteStudent(index);
 }
