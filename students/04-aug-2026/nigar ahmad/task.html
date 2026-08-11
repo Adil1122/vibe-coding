@@ -1,0 +1,90 @@
+<html>
+    <head>
+    <title>Student Management System</title>
+</head>
+
+<body>
+
+    <h1>Student Management System</h1>
+
+    <form>
+
+        <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+            <br><br>
+
+           <label for=> Gender:</label>
+            <input type="radio" id="male" name="Gender"
+            value="male" required>
+            <label for="male">male</label>
+
+            
+            <input type="radio" id="female" name="Gender"
+            value="female" required>
+             <label for="female">female</label>
+
+            <br><br>
+
+            <label for="department"> Department:</label>
+             <select id="dropdown" name="department">
+                <option value= "it">information tecnology></option>
+                <option value="ee">elctrical engineering></option>
+                <option value="me">mechanical engineering</option>
+                <option value="cs">computer science</option>
+            </select>
+
+            <label for="date of birth"> date of birth:</label>
+            <input type="date" id="date of birth" name="Date of birth"
+            value="date of birth">
+            <br><br>
+
+            <label for="Address "> Address:</label>
+              <textarea id="Address"  name="Address"
+              rows="4" cols="50"> </textarea>
+              <br><br>
+
+
+             <label for="Submit"> Submit:</label>
+            <input type="Submit" id="Submit" name="submit"
+            value="submit">
+            <br><br>
+
+            <label for=" Reset">  Reset:</label>
+            <input type="button" id=" Reset" name="Reset"
+            value=" Reset ">
+            <br><br>
+            <input type="button" value="validateform" onclick="validateform()">
+            
+            <button type="reset">Reset</button>
+
+    </form>
+     <table border="1">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Skill</th>
+                    <th>Address</th>
+                    <th>Date of Birth</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="validateform">
+            </tbody>
+        </table>
+        
+</body>
+</html>
