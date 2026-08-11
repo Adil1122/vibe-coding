@@ -1,13 +1,15 @@
 <html>
     <head>
-        <title>student management system</title>
-        <script> src="scripts/common.js"</script>
-    </head>
-    <body>
-        <h1>student management system</h1>
-        <form>
-            rm>
-            <label for="name">Name:</label>
+    <title>Student Management System</title>
+</head>
+
+<body>
+
+    <h1>Student Management System</h1>
+
+    <form>
+
+        <label for="name">Name:</label>
             <input type="text" id="name" name="name">
             <br><br>
 
@@ -39,16 +41,6 @@
                 <option value="cs">computer science</option>
             </select>
 
-            <label  >skill:</label>
-            <input type="checkbox" id="programing" name="skills"
-            value="programing">
-            <label for="programing">programing</label><br>
-            <input type="checkbox" id="design" name="skills" value="design">
-            <label>design:</label>
-            <br><br>
-            
-            
-
             <label for="date of birth"> date of birth:</label>
             <input type="date" id="date of birth" name="Date of birth"
             value="date of birth">
@@ -71,17 +63,18 @@
             <br><br>
             <input type="button" value="validateform" onclick="validateform()">
             
-        </form>
-        <table border="1">
+            <button type="reset">Reset</button>
+
+    </form>
+     <table border="1">
             <thead>
                 <tr>
                     <th>Student Name</th>
                     <th>Age</th>
                     <th>Email</th>
-                    <th>Skill</th>
                     <th>Gender</th>
                     <th>Department</th>
-                    <th>skills</th>
+                    <th>Skill</th>
                     <th>Address</th>
                     <th>Date of Birth</th>
                     <th>edit</th>
@@ -93,5 +86,5 @@
             </tbody>
         </table>
         
-    </body>>
+</body>
 </html>
