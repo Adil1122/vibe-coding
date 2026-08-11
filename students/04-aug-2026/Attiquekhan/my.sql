@@ -2,7 +2,7 @@ Display all students.
 SELECT * FROM `students` WHERE 1
 Display only Computer Science students.
 SELECT * FROM students
-WHERE department = computer science;
+WHERE department = 'Computer Science';
 Display students older than 20.
 SELECT * FROM students WHERE age > 20;
 Display student sorted by name.
@@ -10,7 +10,7 @@ SELECT * FROM students ORDER BY name;
 Display only name and email.
 SELECT name,email FROM students;
  Update department of student with ID = 3.
- UPDATE students SET department = 'science' WHERE ID = 3;
+ UPDATE students SET department = 'Computer Science' WHERE ID = 3;
   Update email of student named "khan".
   UPDATE students SET email = 'khan@gmail.com' WHERE name = 'khan';
   Delete student with ID = 5.
@@ -33,4 +33,4 @@ SELECT COUNT(*) FROM students;
    Display students whose age is between 18 and 25.
    SELECT * FROM `students` WHERE age BETWEEN '18' and '21';
     Display students whose department is bs english or Software Engineering.
-    SELECT * FROM `students` WHERE department ='soft engineering';
+    SELECT * FROM `students` WHERE department ='Software Engineering';
