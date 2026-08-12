@@ -1,0 +1,5 @@
+npm config get prefix
+npm install -g @nestjs/cli
+nest new backend
+cd backend
+npm run start:dev
