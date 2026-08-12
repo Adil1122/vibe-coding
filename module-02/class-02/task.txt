@@ -1,0 +1,7 @@
+npx create-next-app@latest employee-curd
+npm config get prefix
+npm install -g @nestjs/cli
+nest --version
+nest new backend
+cd backend
+npm run start:dev

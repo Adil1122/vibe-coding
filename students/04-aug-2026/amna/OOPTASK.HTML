@@ -1,9 +1,76 @@
 <html>
     <head>
-        <title>OOP Classes</title>
+        <title>opp concepts</title>
         <script>
-            class Student {
-
+ //student class
+    class student {
+    constructor(id, name,age,email,department){
+        this.id=id,
+        this.name=name;
+        this.age=age;
+        this.email=email;
+        this.department=department;
+    }
+    //display students Information
+    displayinfo(){
+        console.log("name:" = this.name);
+        console.log("id:" + this.id);
+        console.log("age:" + this.age);
+        console.log("email:" + this.email);
+        console.log("department:" + this.department)
+    }
+    //update studant Information
+    updatestudent(name,age,email,department){
+        this.name=name;
+        this.age=age;
+        this.email.email;
+        this.department=department;
+    }
+    //delete studants
+    deletestudants(){
+        this.id=null;
+        this.name=null,
+        this.age=null;
+        this.email=null;
+        this.department=null;
+    }
+}
+    // student
+    //  manager class
+    class Studentmanager{
+          constructor(){
+            this.students=[];
+          }
+          //Add students
+          add_student(student){
+            this.students.push(student);
+            console.log("student added successfully.");
+          }
+          //deletestudent
+          delete_student(id){
+             const index=this.students.findindex(students>student.id===id);
+          if(index!==-1){
+            this.students.splice(index, 1);
+            console.log("student delete successfully.");
+          }
+          else{
+            console.log("student not found.");
+          }
+    }
+     //Update student
+     updatestudent(id,name,age,email,department){
+        const student=this.students.find(student >student,id===id);
+        if(ifstudent){
+            student.updatestudent(name,age,email,department);
+            console.log("student updated successfully.");
+        }
+        else{
+            console.log("student not found.");
+        }
+     }
+ }
+         //display all studants
+    class dispayalstudent{
             constructor(id, name, age, email, department) {
                 this.id = id;
                 this.name = name;
@@ -70,11 +137,12 @@
                 console.log("Student not found");
             }
         }
+        this. students.foreach(student=>student.displayinfo());
+   
+            const manager = new StudentManager();
+        const student1 = new Student(1, "unaiza", 19, "unaiza@gmail.com", "Information Technology");
         
-        const manager = new StudentManager();
-        const student1 = new Student(1, "zohaib", 18, "zohaib@gmail.com", "Information Technology");
-        
-        const student2 = new Student(2, "ahmad", 20, "ahmad@gmail.com", "Computer Science");
+        const student2 = new Student(2, "minal", 21, "minal@gmail.com", "Computer Science");
         
         // Add Students
         manager.addStudent(student1);
@@ -87,7 +155,7 @@
         manager.searchStudentById(1);
 
         //Update Student
-        manager.updateStudentById(2, "Anaya", 22, "anaya@gmail.com", "Business Administration");
+        manager.updateStudentById(2, "sidra", 23, "sidra@gmail.com", "Business Administration");
         
         // Display All Students
         manager.displayAllStudents();
@@ -101,7 +169,5 @@
         </script>
     </head>
     <body>
-        <h1>Create OOP classes</h1>
-
     </body>
 </html>

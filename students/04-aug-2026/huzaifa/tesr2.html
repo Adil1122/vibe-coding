@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title> this is a test </title>
+            <h1>student information</h1>
+            <script>src="script/commom.js"</script>
+        </head>
+        <body>
+            <form>
+                <label for=" name"> Name</label>
+                <input type="text" id=" Name" name=" name">
+                <br><br> 
+
+               <label for="age">Age<label>
+                <input type="number" id="age" name="age">                        
+                <br><br>
+
+                <label for="email">Email<label>
+                <input type="email" id="email" name="email">                   
+                <br><br>
+
+                 <label for="skills">Skills<label>
+                <input type="checkboxes" id="skills" name="skills">         
+                <br><br>
+                <input type ="button" value="Add students" onclick="addstudent()">
+            </form>
+            <table border="1">
+                <thead>
+                    <tr>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>email</th>
+                    <th>skills</th>
+                    <th>delete</th>
+                    <th>edit</th>
+                </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                </tbody>
+                <table>
+
+        </body>
+    
+</html>
