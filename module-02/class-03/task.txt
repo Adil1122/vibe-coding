@@ -1,0 +1,38 @@
+1. Changing nest js port
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  await app.enableCors();
+
+  await app.listen(3001);
+}
+bootstrap();
+
+src/main.ts
+
+2. Install Nest Js Database packages
+npm install @nestjs/typeorm typeorm mysql2
+npm install class-validator class-transformer
+3. Configure mysql in nest js
+
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
+@Module({
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: '',
+      database: 'emp-management',
+      autoLoadEntities: true,
+      synchronize: false,
+    }),
+  ],
+})
+export class AppModule {}
