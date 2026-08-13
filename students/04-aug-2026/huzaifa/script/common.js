@@ -107,6 +107,7 @@ function editStudent(index) {
     document.getElementById("name").value = student.name;
     document.getElementById("age").value = student.age;
     document.getElementById("email").value = student.email;
+    document.getElementById("id").value = student.id;
 
     if (student.gender == "male") {
         document.getElementById("male").checked = true;
