@@ -14,7 +14,7 @@ bootstrap();
 src/main.ts
 
 2. Install Nest Js Database packages
-npm install @nestjs/typeorm typeorm mysql2
+ install @nestjs/typeorm typeorm mysql2
 npm install class-validator class-transformer
 3. Configure mysql in nest js
 
@@ -35,4 +35,4 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     }),
   ],
 })
-export class AppModule {}
+export class AppModule {}npm
