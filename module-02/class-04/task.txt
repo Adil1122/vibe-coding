@@ -1,0 +1,6 @@
+Run following commands:
+nest generate module employees
+nest generate controller employees
+nest generate service employees
+
+Create entity
